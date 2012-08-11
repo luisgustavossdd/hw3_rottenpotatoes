@@ -31,3 +31,8 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
     When %Q{I #{check} #{rating}}
   end
 end
+
+Then /I should see all of the movies/ do 
+  all("table#movies").count == 11
+  
+end
